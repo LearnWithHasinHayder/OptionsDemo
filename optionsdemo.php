@@ -42,7 +42,7 @@ class OptionsDemo_Settings_Page {
 
 	public function optionsdemo_settings_content() { ?>
         <div class="wrap">
-            <h1>Options Demo</h1>
+            <h1><?php _e('Options Demo','optionsdemo' ); ?></h1>
             <form method="POST" action="options.php">
 				<?php
 				settings_fields( 'optionsdemo' );
@@ -54,7 +54,7 @@ class OptionsDemo_Settings_Page {
 	}
 
 	public function optionsdemo_setup_sections() {
-		add_settings_section( 'optionsdemo_section', 'Demonstration of plugin settings page', array(), 'optionsdemo' );
+		add_settings_section( 'optionsdemo_section', __('Demonstration of plugin settings page', 'optionsdemo' ), array(), 'optionsdemo' );
 	}
 
 	public function optionsdemo_setup_fields() {
