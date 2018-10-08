@@ -11,6 +11,8 @@ Text Domain: optionsdemo
 Domain Path: /languages/
 */
 
+require_once plugin_dir_path(__FILE__)."/options-demo-form.php";
+
 class OptionsDemo_Settings_Page {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'optionsdemo_create_settings' ) );
